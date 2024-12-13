@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-//@Table(name = "Increment-History")
+@Table(name = "Increment_History")
 
 public class Increment {
         @Id
