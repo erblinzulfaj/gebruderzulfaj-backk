@@ -14,10 +14,8 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins(
-                                "https://gebruderzulfaj-front-eqtf4ehrp-erblinzulfajs-projects.vercel.app",
-                                "https://www.xn--stock-gebrderzulfaj-fbc.com"
-                        )                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                        .allowedOrigins("https://gebruderzulfaj-front-cxkbgv81i-erblinzulfajs-projects.vercel.app/")
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
             }
