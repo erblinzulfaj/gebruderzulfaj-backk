@@ -11,10 +11,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/auth")
 @RequiredArgsConstructor
-@CrossOrigin(origins = {
-        "https://gebruderzulfaj-front-eqtf4ehrp-erblinzulfajs-projects.vercel.app",
-        "https://www.xn--stock-gebrderzulfaj-fbc.com"
-})public class AuthenticationController {
+@CrossOrigin("*")
+public class AuthenticationController {
 
     private final AuthenticationService service;
 

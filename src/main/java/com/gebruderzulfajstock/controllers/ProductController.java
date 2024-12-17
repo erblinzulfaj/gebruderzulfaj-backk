@@ -12,10 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api-product")
-@CrossOrigin(origins = {
-        "https://www.xn--stock-gebrderzulfaj-fbc.com",
-        "https://gebruderzulfaj-front-eqtf4ehrp-erblinzulfajs-projects.vercel.app"
-})
+@CrossOrigin("*")
 public class ProductController {
 
     @Autowired
@@ -32,13 +29,11 @@ public class ProductController {
         ProductDto product = service.getProductByCode(code);
         return product != null ? ResponseEntity.ok(product) : ResponseEntity.notFound().build();
     }
-
     @GetMapping("/original-name/{name}")
     public ResponseEntity<ProductDto> getProductByOriginalName(@PathVariable String name) {
         ProductDto product = service.getProductByOriginalName(name);
         return product != null ? ResponseEntity.ok(product) : ResponseEntity.notFound().build();
     }
-
     @GetMapping("/common-name/{name}")
     public ResponseEntity<ProductDto> getProductByCommonName(@PathVariable String name) {
         ProductDto product = service.getProductByCommonName(name);
